@@ -12,7 +12,7 @@ The design takes a **priority-encoded input** and drives four independent Red-Ye
 ## 🖼️ How It Looks in Real Life
 
 <p align="center">
-  <img src="images/intersection.png" alt="4-way traffic junction illustration" width="600">
+  <img src="intersection.png" alt="4-way traffic junction illustration" width="600">
 </p>
 
 <p align="center"><i>Example: Road 1 (North) is Green while Roads 2, 3 and 4 stay Red — exactly how the FSM behaves when <code>T = 4'b0001</code>.</i></p>
@@ -25,8 +25,8 @@ The design takes a **priority-encoded input** and drives four independent Red-Ye
 |---|---|
 | `traficsignal.v` | Main Verilog design module — the traffic signal FSM logic |
 | `traficsignal_tb.v` | Testbench that drives clock, reset, and `T` inputs to simulate the design |
-| `images/intersection.png` | Illustration of the real-life 4-way junction (this README banner) |
-| `images/fsm_diagram.png` | FSM state diagram showing states and transitions of the design |
+| `intersection.png` | Illustration of the real-life 4-way junction (this README banner) |
+| `fsm_diagram.png` | FSM state diagram showing states and transitions of the design |
 | `schematic.png` | RTL schematic generated from **Xilinx Vivado** after synthesis |
 | `iowave.png` | Simulation waveform screenshot captured from **GTKWave** |
 | `console.png` | Screenshot of the `$monitor` console output from running the simulation |
@@ -78,7 +78,7 @@ Each `RYG` output is a 3-bit code representing the light state:
 ### 🔀 FSM State Diagram
 
 <p align="center">
-  <img src="images/fsm_diagram.png" alt="FSM state diagram of the traffic signal controller" width="700">
+  <img src="fsm_diagram.png" alt="FSM state diagram of the traffic signal controller" width="700">
 </p>
 
 There are **5 states**: `IDLE` and one `ROADx_GREEN` state per road. `rst = 1` forces the FSM back to `IDLE` from any state, and `T = 0000` from any state also returns it to `IDLE`. From `IDLE`, the first set bit in `T` (checked in priority order `T[0] > T[1] > T[2] > T[3]`) moves the FSM directly into that road's Green state. All four road states are also **directly connected to each other** — from any road's Green state, whichever `T` bit is asserted next takes the FSM straight to that road, without passing back through `IDLE`.
@@ -207,8 +207,9 @@ gtkwave dump.vcd
 
 Feel free to use, modify, and learn from this project. Attribution appreciated but not required. 🙌
 
-
-
 ---
 
 <p align="center">Made with 🚦 + Verilog + a lot of <code>#delay</code> tuning</p>
+
+
+
