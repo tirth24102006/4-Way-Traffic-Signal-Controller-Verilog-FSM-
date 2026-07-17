@@ -9,6 +9,31 @@ The design takes a **priority-encoded input** and drives four independent Red-Ye
 
 ---
 
+## 📑 Table of Contents
+
+- [How It Looks in Real Life](#-how-it-looks-in-real-life)
+- [File Structure](#-file-structure)
+- [How the Design Works](#-how-the-design-works)
+  - [Module: `traficsignal`](#module-traficsignal)
+  - [Signal Encoding](#-signal-encoding)
+  - [Logic Flow](#-logic-flow-on-every-posedge-clk)
+  - [FSM State Diagram](#-fsm-state-diagram)
+  - [Important: One Road at a Time!](#-important-one-road-at-a-time)
+- [Testbench: `traficsignal_tb`](#-testbench-traficsignal_tb)
+  - [Giving a Road More Green Time](#-giving-a-road-more-green-time)
+- [Tools Used](#-tools-used)
+- [How to Run the Simulation](#-how-to-run-the-simulation-icarus-verilog--gtkwave)
+  - [Install Icarus Verilog & GTKWave](#1-install-icarus-verilog--gtkwave)
+  - [Compile the Design + Testbench](#2-compile-the-design--testbench)
+  - [Run the Simulation](#3-run-the-simulation)
+  - [View the Waveform in GTKWave](#4-view-the-waveform-in-gtkwave)
+- [How to Use in Xilinx Vivado](#-how-to-use-in-xilinx-vivado-for-schematic)
+- [How to Use in VS Code](#-how-to-use-in-vs-code)
+- [Possible Improvements](#-possible-improvements)
+- [License](#-license)
+
+---
+
 ## 🖼️ How It Looks in Real Life
 
 <p align="center">
@@ -210,6 +235,4 @@ Feel free to use, modify, and learn from this project. Attribution appreciated b
 ---
 
 <p align="center">Made with 🚦 + Verilog + a lot of <code>#delay</code> tuning</p>
-
-
 
