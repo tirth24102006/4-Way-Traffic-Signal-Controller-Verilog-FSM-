@@ -4,7 +4,7 @@ A 4-way traffic signal controller written in Verilog, simulated with Icarus Veri
 # 🚦 4-Way Traffic Signal Controller (Verilog FSM)
 
 A simple **Verilog-based traffic light controller** for a 4-road junction, built and simulated using **Icarus Verilog**, viewed on **GTKWave**, written in **VS Code**, and synthesized/schematic-checked in **Xilinx Vivado**.
-
+ 
 The design takes a **priority-encoded input** and drives four independent Red-Yellow-Green (RYG) signals — one for each road — so that only **one road gets Green at a time**, while the rest stay Red 🔴.
 
 ---
