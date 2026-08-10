@@ -7,7 +7,7 @@ A simple **Verilog-based traffic light controller** for a 4-road junction, built
  
 The design takes a **priority-encoded input** and drives four independent Red-Yellow-Green (RYG) signals — one for each road — so that only **one road gets Green at a time**, while the rest stay Red 🔴.
 
----
+--- 
 
 ## 📑 Table of Contents
 
