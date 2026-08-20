@@ -1,6 +1,6 @@
 # 4-Way-Traffic-Signal-Controller-Verilog-FSM-
 A 4-way traffic signal controller written in Verilog, simulated with Icarus Verilog + GTKWave and synthesized in Xilinx Vivado. Uses a priority-encoded input (T) to grant Green to one road at a time while the rest stay Red, with adjustable green-time via testbench delays.
-
+ 
 # 🚦 4-Way Traffic Signal Controller (Verilog FSM)
 
 A simple **Verilog-based traffic light controller** for a 4-road junction, built and simulated using **Icarus Verilog**, viewed on **GTKWave**, written in **VS Code**, and synthesized/schematic-checked in **Xilinx Vivado**.
